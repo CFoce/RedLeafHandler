@@ -22,7 +22,6 @@ public class PluginChannelListener implements PluginMessageListener {
     public void onPluginMessageReceived(String channel, final Player player, final byte[] message) {
     	try {
         	DataInputStream in = new DataInputStream(new ByteArrayInputStream(message));
-            
             String subchannel = in.readUTF();
             if(subchannel.equals("perms")){
             	String input = in.readUTF();
@@ -30,14 +29,13 @@ public class PluginChannelListener implements PluginMessageListener {
                 plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
                     @Override
                     public void run() {
-                    	player.sendMessage(input);
                     	PermissionAttachment attachment = player.addAttachment(plugin);
                     	Data.perms.put(player.getUniqueId(), attachment);
                     	for (int i = 0; i < info.length; i++) {
                     		attachment.setPermission(info[i], true);
                     	}
                     }
-                }, 100L);
+                }, 1L);
             }
         } catch (IOException e) {
             e.printStackTrace();
