@@ -1,5 +1,7 @@
 package com.akaiha.redleafhandler;
 
+import java.util.UUID;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -14,7 +16,9 @@ public class PlayerLeaveListener implements Listener {
 	
 	@EventHandler
     public void onPlayerLeave(PlayerQuitEvent event) {
-		plugin.perms.remove(event.getPlayer().getUniqueId());
-		plugin.groups.remove(event.getPlayer().getUniqueId());
+		UUID uuid = event.getPlayer().getUniqueId();
+		event.getPlayer().removeAttachment(plugin.perms.get(uuid));
+		plugin.perms.remove(uuid);
+		plugin.groups.remove(uuid);
     }
 }
