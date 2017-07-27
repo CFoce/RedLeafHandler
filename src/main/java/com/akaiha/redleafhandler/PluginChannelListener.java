@@ -43,7 +43,7 @@ public class PluginChannelListener implements PluginMessageListener {
                     		attachment.setPermission(perms.get(i).getAsString(), true);
                     	}
                     	for (int i = 0; i < antiPerms.size(); i++) {
-                    		attachment.setPermission(antiPerms.get(i).getAsString(), true);
+                    		attachment.setPermission(antiPerms.get(i).getAsString(), false);
                     	}
                     	plugin.groups.put(player.getUniqueId(), groups);
                     }

@@ -50,3 +50,5 @@ Temporary Items
 
 .gradle/3.0/taskArtifacts/cache.properties.lock
 *.bin
+*.lock
+.gradle/3.0/taskArtifacts/cache.properties.lock
