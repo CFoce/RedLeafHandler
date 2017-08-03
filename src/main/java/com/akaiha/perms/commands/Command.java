@@ -1,4 +1,4 @@
-package com.akaiha.redleafhandler;
+package com.akaiha.perms.commands;
 
 import java.util.Map;
 
@@ -7,11 +7,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachment;
 
+import com.akaiha.perms.Perms;
+
 public class Command implements CommandExecutor {
 	
-	private Main plugin;
+	private Perms plugin;
 	
-	public Command(Main plugin) {
+	public Command(Perms plugin) {
 		this.plugin = plugin;
 	}
 

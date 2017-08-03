@@ -1,4 +1,4 @@
-package com.akaiha.redleafhandler;
+package com.akaiha.perms.listener;
 
 import java.util.UUID;
 
@@ -10,14 +10,15 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.permissions.PermissionAttachment;
 
+import com.akaiha.perms.Perms;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 public class PlayerListener implements Listener {
 
-	private Main plugin;
+	private Perms plugin;
 	
-	public PlayerListener(Main plugin) {
+	public PlayerListener(Perms plugin) {
 		this.plugin = plugin;
 	}
 	
@@ -43,7 +44,7 @@ public class PlayerListener implements Listener {
                 public void run() {
                 	onPlayerJoin(event);
                 }
-            }, 20L);
+            }, 10L);
 			return;
 		}
 		JsonObject jObj = plugin.jPlayer.get(uuid);
@@ -65,5 +66,6 @@ public class PlayerListener implements Listener {
     		String groups = jObj.get("groups").getAsString();
         	plugin.groups.put(player.getUniqueId(), groups);
     	}
+    	plugin.jPlayer.remove(uuid);
     }
 }

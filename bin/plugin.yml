@@ -1,4 +1,9 @@
-name: RedLeafHandler
-main: com.akaiha.redleafhandler.Main
-version: 0.4
+name: Perms
+main: com.akaiha.perms.Perms
+version: 0.9
 description: Created by Akaiha
+
+commands:
+  perms:
+    permission: perms.perms
+    description: Checks all personal permissions info for a player.

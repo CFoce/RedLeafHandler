@@ -60,3 +60,4 @@ bin/plugin.yml
 bin/com/akaiha/redleafhandler/Main.class
 build/tmp/jar/MANIFEST.MF
 build/classes/main/com/akaiha/redleafhandler/Main.class
+build/resources/main/plugin.yml

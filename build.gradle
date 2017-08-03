@@ -15,3 +15,7 @@ repositories {
 dependencies {
 	compile group: 'org.bukkit', name: 'bukkit', version: spigotVersion
 }
+
+jar {
+    baseName 'Perms'
+}

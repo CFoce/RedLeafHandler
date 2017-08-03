@@ -1,4 +1,4 @@
-package com.akaiha.redleafhandler;
+package com.akaiha.perms.listener;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
@@ -6,11 +6,13 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
+import com.akaiha.perms.Perms;
+
 public class ChatListener implements Listener {
 
-	private Main plugin;
+	private Perms plugin;
 	
-	public ChatListener(Main plugin) {
+	public ChatListener(Perms plugin) {
 		this.plugin = plugin;
 	}
 	
