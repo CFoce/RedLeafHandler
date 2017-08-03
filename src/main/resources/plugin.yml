@@ -1,4 +1,8 @@
 name: RedLeafHandler
 main: com.akaiha.redleafhandler.Main
-version: 0.4
+version: 0.5
 description: Created by Akaiha
+
+commands:
+  perms:
+    description: Checks all personal permissions info.

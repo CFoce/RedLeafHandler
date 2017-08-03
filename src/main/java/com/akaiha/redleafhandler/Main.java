@@ -25,5 +25,6 @@ public class Main extends JavaPlugin {
         getServer().getMessenger().registerIncomingPluginChannel(this, "Return", pcl = new PluginChannelListener(this));
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
+        getCommand("perms").setExecutor(new Command(this));
     }
 }

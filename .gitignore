@@ -52,3 +52,11 @@ Temporary Items
 *.bin
 *.lock
 .gradle/3.0/taskArtifacts/cache.properties.lock
+build/classes/main/com/akaiha/redleafhandler/ChatListener.class
+build/classes/main/com/akaiha/redleafhandler/Command.class
+*.lock
+*.bin
+bin/plugin.yml
+bin/com/akaiha/redleafhandler/Main.class
+build/tmp/jar/MANIFEST.MF
+build/classes/main/com/akaiha/redleafhandler/Main.class
