@@ -1,9 +1,12 @@
 name: Perms
 main: com.akaiha.perms.Perms
-version: 0.9
-description: Created by Akaiha
+version: 0.9.1
+load: STARTUP
+depend: [Core]
+prefix: Perms
+author: Akaiha
+description: Server side permissions handler.
 
 commands:
   perms:
-    permission: perms.perms
     description: Checks all personal permissions info for a player.

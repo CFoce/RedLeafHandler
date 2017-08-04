@@ -10,9 +10,13 @@ repositories {
     maven {
         url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
     }
+    flatDir {
+       dirs 'libs'
+    }
 }
 
 dependencies {
+    compile name: 'Core'
 	compile group: 'org.bukkit', name: 'bukkit', version: spigotVersion
 }
 
